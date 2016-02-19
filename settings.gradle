@@ -1,0 +1,3 @@
+include ':app', ':listapp'
+include ':fragmentDemo5_commute'
+include ':demo_zhy_23_fragments'

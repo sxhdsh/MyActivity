@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "F:\\Gjandroid\\MyActivity\\activityBackgroup\\build\\intermediates\\res\\merged\\debug\\layout\\method3.xml",
+        "source": "F:\\Gjandroid\\MyActivity\\activityBackgroup\\src\\main\\res\\layout\\method3.xml"
+    },
+    {
+        "merged": "F:\\Gjandroid\\MyActivity\\activityBackgroup\\build\\intermediates\\res\\merged\\debug\\layout\\method2.xml",
+        "source": "F:\\Gjandroid\\MyActivity\\activityBackgroup\\src\\main\\res\\layout\\method2.xml"
+    },
+    {
+        "merged": "F:\\Gjandroid\\MyActivity\\activityBackgroup\\build\\intermediates\\res\\merged\\debug\\layout\\method1.xml",
+        "source": "F:\\Gjandroid\\MyActivity\\activityBackgroup\\src\\main\\res\\layout\\method1.xml"
+    }
+]

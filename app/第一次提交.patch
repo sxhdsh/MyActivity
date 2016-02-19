@@ -1,0 +1,971 @@
+Index: app/src/main/res/layout/activity_fragment1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_fragment1.xml	(revision )
++++ app/src/main/res/layout/activity_fragment1.xml	(revision )
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++              android:orientation="vertical"
++              android:layout_width="match_parent"
++              android:layout_height="match_parent"
++              android:background="@android:color/black"
++    >
++    <TextView
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="本机信息"
++        />
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/test/java/com/saber/administrator/myactivity/ExampleUnitTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/test/java/com/saber/administrator/myactivity/ExampleUnitTest.java	(revision )
++++ app/src/test/java/com/saber/administrator/myactivity/ExampleUnitTest.java	(revision )
+@@ -0,0 +1,15 @@
++package com.saber.administrator.myactivity;
++
++import org.junit.Test;
++
++import static org.junit.Assert.*;
++
++/**
++ * To work on unit tests, switch the Test Artifact in the Build Variants view.
++ */
++public class ExampleUnitTest {
++    @Test
++    public void addition_isCorrect() throws Exception {
++        assertEquals(4, 2 + 2);
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/values/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/styles.xml	(revision )
++++ app/src/main/res/values/styles.xml	(revision )
+@@ -0,0 +1,11 @@
++<resources>
++
++    <!-- Base application theme. -->
++    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
++        <!-- Customize your theme here. -->
++        <item name="colorPrimary">@color/colorPrimary</item>
++        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
++        <item name="colorAccent">@color/colorAccent</item>
++    </style>
++
++</resources>
+Index: app/src/main/res/values/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/dimens.xml	(revision )
++++ app/src/main/res/values/dimens.xml	(revision )
+@@ -0,0 +1,5 @@
++<resources>
++    <!-- Default screen margins, per the Android Design guidelines. -->
++    <dimen name="activity_horizontal_margin">16dp</dimen>
++    <dimen name="activity_vertical_margin">16dp</dimen>
++</resources>
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision )
++++ app/src/main/AndroidManifest.xml	(revision )
+@@ -0,0 +1,24 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest package="com.saber.administrator.myactivity"
++          xmlns:android="http://schemas.android.com/apk/res/android">
++
++    <application
++        android:allowBackup="true"
++        android:icon="@mipmap/ic_launcher"
++        android:label="@string/app_name"
++        android:supportsRtl="true"
++        android:theme="@style/AppTheme"
++
++        >
++        <activity android:name=".MainActivity"
++            android:screenOrientation="landscape"
++            >
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN"/>
++
++                <category android:name="android.intent.category.LAUNCHER"/>
++            </intent-filter>
++        </activity>
++    </application>
++
++</manifest>
+Index: app/src/main/java/com/saber/administrator/myactivity/Fragment3Activity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/saber/administrator/myactivity/Fragment3Activity.java	(revision )
++++ app/src/main/java/com/saber/administrator/myactivity/Fragment3Activity.java	(revision )
+@@ -0,0 +1,41 @@
++package com.saber.administrator.myactivity;
++
++import android.app.Fragment;
++import android.os.Bundle;
++import android.support.annotation.Nullable;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++/**
++ * Created by Administrator on 2016/2/17 15:52。
++ * 创建人 ：朱家琪
++ * 版本 ：1.0
++ * * ━━━━━━神兽出没━━━━━━
++ * 　　　┏┓　　　┏┓
++ * 　　┏┛┻━━━┛┻┓
++ * 　　┃　　　　　　　┃
++ * 　　┃　　　━　　　┃
++ * 　　┃　┳┛　┗┳　┃
++ * 　　┃　　　　　　　┃
++ * 　　┃　　　┻　　　┃
++ * 　　┃　　　　　　　┃
++ * 　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
++ * 　　　　┃　　　┃    神兽保佑,代码无bug
++ * 　　　　┃　　　┃
++ * 　　　　┃　　　┗━━━┓
++ * 　　　　┃　　　　　　　┣┓
++ * 　　　　┃　　　　　　　┏┛
++ * 　　　　┗┓┓┏━┳┓┏┛
++ * 　　　　　┃┫┫　┃┫┫
++ * 　　　　　┗┻┛　┗┻┛
++ */
++public class Fragment3Activity extends Fragment{
++    @Nullable
++    @Override
++    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
++        View view = inflater.inflate(R.layout.activity_fragment3,null);
++
++        return view;
++    }
++}
+Index: app/src/main/java/com/saber/administrator/data/BlackNumberDao.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/saber/administrator/data/BlackNumberDao.java	(revision )
++++ app/src/main/java/com/saber/administrator/data/BlackNumberDao.java	(revision )
+@@ -0,0 +1,186 @@
++package com.saber.administrator.data;
++
++import android.content.ContentValues;
++import android.content.Context;
++import android.database.Cursor;
++import android.database.sqlite.SQLiteDatabase;
++import android.os.SystemClock;
++
++
++import java.util.ArrayList;
++import java.util.List;
++
++public class BlackNumberDao {
++
++    public BlackNumberOpenHelper helper;
++
++    public BlackNumberDao(Context context) {
++        helper = new BlackNumberOpenHelper(context);
++    }
++
++
++
++
++    /**
++     * @param number 黑名单号码
++     * @param mode   拦截模式
++     */
++    public boolean add(String number, String mode) {
++        SQLiteDatabase db = helper.getWritableDatabase();
++        ContentValues contentValues = new ContentValues();
++        contentValues.put("number", number);
++        contentValues.put("mode", mode);
++        long rowid = db.insert("blacknumber", null, contentValues);
++        if (rowid == -1) {
++            return false;
++        } else {
++            return true;
++        }
++    }
++
++    /**
++     * 通过电话号码删除
++     *
++     * @param number 电话号码
++     */
++    public boolean delete(String number) {
++        SQLiteDatabase db = helper.getWritableDatabase();
++        int rowNumber = db.delete("blacknumber", "number=?", new String[]{number});
++        if (rowNumber == 0) {
++            return false;
++        } else {
++            return true;
++        }
++    }
++
++    /**
++     * 通过电话号码修改拦截的模式
++     *
++     * @param number
++     */
++    public boolean changeNumberMode(String number, String mode) {
++        SQLiteDatabase db = helper.getWritableDatabase();
++        ContentValues values = new ContentValues();
++        values.put("mode", mode);
++        int rownumber =db.update("blacknumber", values, "number=?", new String[]{number});
++        if (rownumber == 0) {
++            return false;
++        } else {
++            return true;
++        }
++    }
++
++    /**
++     * 返回一个黑名单号码拦截模式
++     *
++     * @return
++     */
++    public String findNumber(String number) {
++        String mode = "";
++        SQLiteDatabase db = helper.getReadableDatabase();
++        Cursor cursor = db.query("blacknumber", new String[]{"mode"}, "number=?", new String[]{number}, null, null, null);
++        if (cursor.moveToNext()) {
++            mode = cursor.getString(0);
++        }
++        cursor.close();
++        db.close();
++        return mode;
++    }
++/*
++
++    */
++/**
++     * 查询所有的黑名单
++     *
++     * @return
++     *//*
++
++    public List<BlackNumberInfo> findAll() {
++        SQLiteDatabase db = helper.getReadableDatabase();
++        List<BlackNumberInfo> blackNumberInfos = new ArrayList<BlackNumberInfo>();
++        Cursor cursor = db.query("blacknumber", new String[]{"number", "mode"}, null, null, null, null, null);
++        while (cursor.moveToNext()) {
++            BlackNumberInfo blackNumberInfo = new BlackNumberInfo();
++            blackNumberInfo.setNumber(cursor.getString(0));
++            blackNumberInfo.setMode(cursor.getString(1));
++            blackNumberInfos.add(blackNumberInfo);
++        }
++        cursor.close();
++        db.close();
++
++        SystemClock.sleep(3000);
++        return blackNumberInfos;
++    }
++
++    */
++/**
++     * 分页加载数据
++     *
++     * @param pageNumber 表示当前是哪一页
++     * @param pageSize   表示每一页有多少条数据
++     * @return limit 表示限制当前有多少数据
++     * offset 表示跳过 从第几条开始
++     *//*
++
++    public List<BlackNumberInfo> findPar(int pageNumber, int pageSize) {
++        SQLiteDatabase db = helper.getReadableDatabase();
++        Cursor cursor = db.rawQuery("select number,mode from blacknumber limit ? offset ?", new String[]{String.valueOf(pageSize),
++                String.valueOf(pageSize * pageNumber)});
++        List<BlackNumberInfo> blackNumberInfos = new ArrayList<BlackNumberInfo>();
++        while (cursor.moveToNext()) {
++            BlackNumberInfo blackNumberInfo = new BlackNumberInfo();
++            blackNumberInfo.setMode(cursor.getString(1));
++            blackNumberInfo.setNumber(cursor.getString(0));
++            blackNumberInfos.add(blackNumberInfo);
++        }
++        cursor.close();
++        db.close();
++        return blackNumberInfos;
++    }
++
++    */
++/**
++     * 分批加载数据
++     * @param startIndex  开始的位置
++     * @param maxCount    每页展示的最大的条目
++     * @return
++     *//*
++
++    public List<BlackNumberInfo> findPar2(int startIndex, int maxCount) {
++        SQLiteDatabase db = helper.getReadableDatabase();
++        Cursor cursor = db.rawQuery("select number,mode from blacknumber limit ? offset ?", new String[]{String.valueOf(maxCount),
++                String.valueOf(startIndex)});
++        List<BlackNumberInfo> blackNumberInfos = new ArrayList<BlackNumberInfo>();
++        while (cursor.moveToNext()) {
++            BlackNumberInfo blackNumberInfo = new BlackNumberInfo();
++            blackNumberInfo.setMode(cursor.getString(1));
++            blackNumberInfo.setNumber(cursor.getString(0));
++            blackNumberInfos.add(blackNumberInfo);
++        }
++        cursor.close();
++        db.close();
++        return blackNumberInfos;
++    }
++
++
++
++
++    */
++/**
++     * 获取总的记录数
++     * @return
++     *//*
++
++    public int getTotalNumber(){
++        SQLiteDatabase db = helper.getReadableDatabase();
++        Cursor cursor = db.rawQuery("select count(*) from blacknumber", null);
++        cursor.moveToNext();
++        int count = cursor.getInt(0);
++        cursor.close();
++        db.close();
++        return count;
++    }
++*/
++
++
++}
+Index: app/src/main/java/com/saber/administrator/myactivity/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/saber/administrator/myactivity/MainActivity.java	(revision )
++++ app/src/main/java/com/saber/administrator/myactivity/MainActivity.java	(revision )
+@@ -0,0 +1,77 @@
++package com.saber.administrator.myactivity;
++
++import android.app.Activity;
++import android.app.FragmentManager;
++import android.app.FragmentTransaction;
++import android.os.Bundle;
++import android.os.Handler;
++import android.os.Message;
++import android.util.Log;
++
++import com.saber.administrator.data.BlackNumberDao;
++import com.saber.administrator.data.QrCodeHelper;
++
++import java.util.Timer;
++import java.util.TimerTask;
++
++public class MainActivity extends Activity {
++
++
++    private QrCodeHelper qrCodeHelper;
++    private BlackNumberDao blackNumberDao;
++    private TimerTask timerTask;        //用于android计时器
++    private Timer timer;
++
++    Fragment3Activity fragment3Activity = new Fragment3Activity();
++    Handler handler = new Handler(){
++        @Override
++        public void handleMessage(Message msg) {
++            super.handleMessage(msg);
++            switch (msg.what){
++                case 1:
++                    FragmentManager fragmentManager = getFragmentManager();
++                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
++                    fragmentTransaction.remove(fragment1Activity).commit();
++                    fragmentTransaction.replace(R.id.fr_ag1,fragment3Activity).commit();
++                    break;
++            }
++        }
++    };
++    private Fragment1Activity fragment1Activity;
++    private Fragment2Activity fragment2Activity;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_main);
++        qrCodeHelper = new QrCodeHelper(MainActivity.this);
++        /*blackNumberDao = new BlackNumberDao(this);
++
++        boolean i =  blackNumberDao.add("123","sda");*/
++        long i = qrCodeHelper.add(this);
++        Log.i("增加数据库返回的值是", Long.toString(i));
++        fragment1Activity = new Fragment1Activity();
++        fragment2Activity = new Fragment2Activity();
++
++        FragmentManager fragment = getFragmentManager();
++        FragmentTransaction transaction = fragment.beginTransaction();
++        transaction.replace(R.id.fr_ag1, fragment1Activity);
++        transaction.commit();
++
++        FragmentManager fragmentManager1 = getFragmentManager();
++        FragmentTransaction transaction1 = fragmentManager1.beginTransaction();
++        transaction1.replace(R.id.fr_ag2, fragment2Activity);
++        transaction1.commit();
++
++        timer = new Timer();
++        timerTask = new TimerTask() {
++            @Override
++            public void run() {
++                Message message = new Message();
++                message.what = 1;
++                handler.sendMessage(message);
++            }
++        };
++        timer.schedule(timerTask,10*1000,10*1000);
++    }
++}
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/colors.xml	(revision )
++++ app/src/main/res/values/colors.xml	(revision )
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <color name="colorPrimary">#3F51B5</color>
++    <color name="colorPrimaryDark">#303F9F</color>
++    <color name="colorAccent">#FF4081</color>
++</resources>
+Index: app/src/main/java/com/saber/administrator/myactivity/Fragment2Activity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/saber/administrator/myactivity/Fragment2Activity.java	(revision )
++++ app/src/main/java/com/saber/administrator/myactivity/Fragment2Activity.java	(revision )
+@@ -0,0 +1,48 @@
++package com.saber.administrator.myactivity;
++
++import android.app.Activity;
++import android.app.Fragment;
++import android.os.Bundle;
++import android.support.annotation.Nullable;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++/**
++ * Created by Administrator on 2016/2/16 15:29。
++ * 创建人 ：朱家琪
++ * 版本 ：1.0
++ * * ━━━━━━神兽出没━━━━━━
++ * 　　　┏┓　　　┏┓
++ * 　　┏┛┻━━━┛┻┓
++ * 　　┃　　　　　　　┃
++ * 　　┃　　　━　　　┃
++ * 　　┃　┳┛　┗┳　┃
++ * 　　┃　　　　　　　┃
++ * 　　┃　　　┻　　　┃
++ * 　　┃　　　　　　　┃
++ * 　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
++ * 　　　　┃　　　┃    神兽保佑,代码无bug
++ * 　　　　┃　　　┃
++ * 　　　　┃　　　┗━━━┓
++ * 　　　　┃　　　　　　　┣┓
++ * 　　　　┃　　　　　　　┏┛
++ * 　　　　┗┓┓┏━┳┓┏┛
++ * 　　　　　┃┫┫　┃┫┫
++ * 　　　　　┗┻┛　┗┻┛
++ */
++public class Fragment2Activity extends Fragment {
++
++    @Override
++    public void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++
++    }
++
++    @Nullable
++    @Override
++    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
++        View view = inflater.inflate(R.layout.activity_fragment2,container,false);
++        return view;
++    }
++}
+Index: app/src/main/java/com/saber/administrator/myactivity/Fragment1Activity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/saber/administrator/myactivity/Fragment1Activity.java	(revision )
++++ app/src/main/java/com/saber/administrator/myactivity/Fragment1Activity.java	(revision )
+@@ -0,0 +1,41 @@
++package com.saber.administrator.myactivity;
++
++import android.app.Fragment;
++import android.os.Bundle;
++import android.support.annotation.Nullable;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++/**
++ * Created by Administrator on 2016/2/16 15:29。
++ * 创建人 ：朱家琪
++ * 版本 ：1.0
++ * * ━━━━━━神兽出没━━━━━━
++ * 　　　┏┓　　　┏┓
++ * 　　┏┛┻━━━┛┻┓
++ * 　　┃　　　　　　　┃
++ * 　　┃　　　━　　　┃
++ * 　　┃　┳┛　┗┳　┃
++ * 　　┃　　　　　　　┃
++ * 　　┃　　　┻　　　┃
++ * 　　┃　　　　　　　┃
++ * 　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
++ * 　　　　┃　　　┃    神兽保佑,代码无bug
++ * 　　　　┃　　　┃
++ * 　　　　┃　　　┗━━━┓
++ * 　　　　┃　　　　　　　┣┓
++ * 　　　　┃　　　　　　　┏┛
++ * 　　　　┗┓┓┏━┳┓┏┛
++ * 　　　　　┃┫┫　┃┫┫
++ * 　　　　　┗┻┛　┗┻┛
++ */
++public class Fragment1Activity extends Fragment {
++
++    @Nullable
++    @Override
++    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
++        View view = inflater.inflate(R.layout.activity_fragment1,container,false);
++        return view;
++    }
++}
+Index: app/src/main/res/layout/activity_fragment2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_fragment2.xml	(revision )
++++ app/src/main/res/layout/activity_fragment2.xml	(revision )
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++              android:orientation="vertical"
++              android:layout_width="match_parent"
++              android:layout_height="match_parent"
++              android:background="@android:color/holo_blue_bright"
++    >
++        <TextView
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="请扫描下方二维码，进入lesee管理"
++            />
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/saber/administrator/data/BlackNumberOpenHelper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/saber/administrator/data/BlackNumberOpenHelper.java	(revision )
++++ app/src/main/java/com/saber/administrator/data/BlackNumberOpenHelper.java	(revision )
+@@ -0,0 +1,29 @@
++package com.saber.administrator.data;
++
++import android.content.Context;
++import android.database.sqlite.SQLiteDatabase;
++import android.database.sqlite.SQLiteOpenHelper;
++
++public class BlackNumberOpenHelper extends SQLiteOpenHelper{
++
++    public BlackNumberOpenHelper(Context context) {
++        super(context, "safe.db", null, 1);
++    }
++
++    /**
++     * blacknumber 表名
++     * _id 主键自动增长
++     * number 电话号码
++     * mode 拦截模式 电话拦截 短信拦截
++     * @param db
++     */
++    @Override
++    public void onCreate(SQLiteDatabase db) {
++        db.execSQL("create table blacknumber (_id integer primary key autoincrement,number varchar(20),mode varchar(2))");
++    }
++
++    @Override
++    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
++
++    }
++}
+Index: app/src/main/java/com/saber/administrator/data/DBHelper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/saber/administrator/data/DBHelper.java	(revision )
++++ app/src/main/java/com/saber/administrator/data/DBHelper.java	(revision )
+@@ -0,0 +1,46 @@
++package com.saber.administrator.data;
++
++import android.content.Context;
++import android.database.sqlite.SQLiteDatabase;
++import android.database.sqlite.SQLiteOpenHelper;
++
++/**
++ * Created by Administrator on 2016/2/17 9:38。
++ * 创建人 ：朱家琪
++ * 版本 ：1.0
++ * * ━━━━━━神兽出没━━━━━━
++ * 　　　┏┓　　　┏┓
++ * 　　┏┛┻━━━┛┻┓
++ * 　　┃　　　　　　　┃
++ * 　　┃　　　━　　　┃
++ * 　　┃　┳┛　┗┳　┃
++ * 　　┃　　　　　　　┃
++ * 　　┃　　　┻　　　┃
++ * 　　┃　　　　　　　┃
++ * 　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
++ * 　　　　┃　　　┃    神兽保佑,代码无bug
++ * 　　　　┃　　　┃
++ * 　　　　┃　　　┗━━━┓
++ * 　　　　┃　　　　　　　┣┓
++ * 　　　　┃　　　　　　　┏┛
++ * 　　　　┗┓┓┏━┳┓┏┛
++ * 　　　　　┃┫┫　┃┫┫
++ * 　　　　　┗┻┛　┗┻┛
++ */
++public class DBHelper extends SQLiteOpenHelper{
++
++    public static final String CODE_NAME = "lesee_database.db";
++    public DBHelper(Context context) {
++        super(context, CODE_NAME, null, 1);
++    }
++
++    @Override
++    public void onCreate(SQLiteDatabase db) {
++            db.execSQL(QrCodeHelper.CREATE_TABLE);
++    }
++
++    @Override
++    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
++
++    }
++}
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision )
++++ app/build.gradle	(revision )
+@@ -0,0 +1,26 @@
++apply plugin: 'com.android.application'
++
++android {
++    compileSdkVersion 23
++    buildToolsVersion "23.0.2"
++
++    defaultConfig {
++        applicationId "com.saber.administrator.myactivity"
++        minSdkVersion 15
++        targetSdkVersion 23
++        versionCode 1
++        versionName "1.0"
++    }
++    buildTypes {
++        release {
++            minifyEnabled false
++            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
++        }
++    }
++}
++
++dependencies {
++    compile fileTree(dir: 'libs', include: ['*.jar'])
++    testCompile 'junit:junit:4.12'
++    compile 'com.android.support:appcompat-v7:23.1.1'
++}
+Index: app/src/androidTest/java/com/saber/administrator/myactivity/ApplicationTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/androidTest/java/com/saber/administrator/myactivity/ApplicationTest.java	(revision )
++++ app/src/androidTest/java/com/saber/administrator/myactivity/ApplicationTest.java	(revision )
+@@ -0,0 +1,26 @@
++package com.saber.administrator.myactivity;
++
++import android.app.Application;
++import android.content.Context;
++import android.database.sqlite.SQLiteDatabase;
++import android.test.ApplicationTestCase;
++
++import com.saber.administrator.data.QrCodeHelper;
++
++/**
++ * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
++ */
++public class ApplicationTest extends ApplicationTestCase<Application> {
++
++    public Context mContext;
++
++    public ApplicationTest() {
++        super(Application.class);
++    }
++
++    public void TestAdd(){
++        QrCodeHelper qrCodeHelper = new QrCodeHelper(mContext);
++
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_fragment3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_fragment3.xml	(revision )
++++ app/src/main/res/layout/activity_fragment3.xml	(revision )
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++              android:orientation="vertical"
++              android:layout_width="match_parent"
++              android:layout_height="match_parent"
++
++    >
++    <TextView
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="这是第3个页面"
++        />
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/.gitignore	(revision )
++++ app/.gitignore	(revision )
+@@ -0,0 +1,1 @@
++/build
+Index: app/src/main/res/values-w820dp/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-w820dp/dimens.xml	(revision )
++++ app/src/main/res/values-w820dp/dimens.xml	(revision )
+@@ -0,0 +1,6 @@
++<resources>
++    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
++         (such as screen margins) for screens with more than 820dp of available width. This
++         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
++    <dimen name="activity_horizontal_margin">64dp</dimen>
++</resources>
+Index: app/src/main/java/com/saber/administrator/data/QrCodeHelper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/saber/administrator/data/QrCodeHelper.java	(revision )
++++ app/src/main/java/com/saber/administrator/data/QrCodeHelper.java	(revision )
+@@ -0,0 +1,103 @@
++package com.saber.administrator.data;
++
++import android.content.ContentValues;
++import android.content.Context;
++import android.database.sqlite.SQLiteDatabase;
++import android.database.sqlite.SQLiteOpenHelper;
++
++/**
++ * Created by Administrator on 2016/2/17 9:37。
++ * 创建人 ：朱家琪
++ * 版本 ：1.0
++ * * ━━━━━━神兽出没━━━━━━
++ * 　　　┏┓　　　┏┓
++ * 　　┏┛┻━━━┛┻┓
++ * 　　┃　　　　　　　┃
++ * 　　┃　　　━　　　┃
++ * 　　┃　┳┛　┗┳　┃
++ * 　　┃　　　　　　　┃
++ * 　　┃　　　┻　　　┃
++ * 　　┃　　　　　　　┃
++ * 　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
++ * 　　　　┃　　　┃    神兽保佑,代码无bug
++ * 　　　　┃　　　┃
++ * 　　　　┃　　　┗━━━┓
++ * 　　　　┃　　　　　　　┣┓
++ * 　　　　┃　　　　　　　┏┛
++ * 　　　　┗┓┓┏━┳┓┏┛
++ * 　　　　　┃┫┫　┃┫┫
++ * 　　　　　┗┻┛　┗┻┛
++ */
++public class QrCodeHelper {
++
++    //数据库表名
++    public static final String QRCODE = "qrcode";
++
++
++    //自增id
++    public static String _ID = "ID";
++
++    public static final String ERROR_CODE="errorCode";//0为正确，其他为错误码，如果请求成功错误码忽略
++    public static final String STORECODE="storecode";//返回店面Code，如果没有为空
++    public static final String STORENAME="storename";//店面名称
++    public static final String PRODUCTFAMILY="productfamily";//机器类型
++    public static final String ERROR_MSG="errorMsg";//错误码对应的错误信息
++
++
++
++    //建表语句
++    public static final String CREATE_TABLE =
++
++            /*"CREATE TABLE "+ QRCODE+"("+_ID +" INTEGER PRIMARY ," +
++                    ERROR_CODE+" INTEGER , "
++                    +STORECODE+" TEXT , "
++                    +STORENAME+" TEXT , "
++                    +PRODUCTFAMILY+" TEXT , "
++                    +ERROR_MSG+" TEXT ,"
++                    +");";*/
++
++            "create table " + QRCODE+"("+_ID+"integer primary ," +
++            ERROR_CODE+" INTEGER , "
++            +STORECODE+" TEXT , "
++            +STORENAME+" TEXT , "
++            +PRODUCTFAMILY+" TEXT , "
++            +ERROR_MSG+" TEXT)";
++
++           /* "CREATE TABLE IF NOT EXISTS "+ QRCODE
++                    +"("+_ID +" INTEGER PRIMARY KEY AUTOINCREMENT ,"
++                    +ERROR_CODE+" INTEGER , "
++                    +STORECODE+" TEXT , "
++                    +STORENAME+" TEXT , "
++                    +PRODUCTFAMILY+" TEXT , "
++                    +ERROR_MSG+" TEXT"
++                    +");";*/
++    private DBHelper dbHelper;
++
++    public QrCodeHelper(Context context){
++        if(dbHelper == null){
++            dbHelper = new DBHelper(context);
++        }
++    }
++    //添加数据
++    public long add(Context context){
++        if(dbHelper == null){
++            dbHelper = new DBHelper(context);
++        }
++        SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
++        if(sqLiteDatabase == null){
++            return -1;
++        }
++        ContentValues contentValues = new ContentValues();
++        contentValues.put(ERROR_CODE,11);
++        /*contentValues.put(STORECODE, "asd");
++        contentValues.put(STORENAME, "fas");
++        contentValues.put(PRODUCTFAMILY,"");
++        contentValues.put(ERROR_MSG,"asd");*/
++        long i = sqLiteDatabase.insert(QRCODE,null,contentValues);
++
++        sqLiteDatabase.close();
++        dbHelper.close();
++        return i;
++    }
++
++}
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision )
++++ app/src/main/res/layout/activity_main.xml	(revision )
+@@ -0,0 +1,30 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    >
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="300dp"
++        android:orientation="horizontal"
++        android:weightSum="2"
++        android:layout_alignParentBottom="true"
++        >
++        <FrameLayout
++            android:layout_width="0dp"
++            android:layout_weight="1"
++            android:layout_height="match_parent"
++            android:id="@+id/fr_ag1"
++            />
++        <FrameLayout
++            android:layout_width="0dp"
++            android:layout_weight="1"
++            android:layout_height="match_parent"
++            android:id="@+id/fr_ag2"
++            />
++        </LinearLayout>
++
++
++</RelativeLayout>
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision )
++++ app/src/main/res/values/strings.xml	(revision )
+@@ -0,0 +1,3 @@
++<resources>
++    <string name="app_name">MyActivity</string>
++</resources>
+Index: app/proguard-rules.pro
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/proguard-rules.pro	(revision )
++++ app/proguard-rules.pro	(revision )
+@@ -0,0 +1,17 @@
++# Add project specific ProGuard rules here.
++# By default, the flags in this file are appended to flags specified
++# in E:\Android\sdk/tools/proguard/proguard-android.txt
++# You can edit the include path and order by changing the proguardFiles
++# directive in build.gradle.
++#
++# For more details, see
++#   http://developer.android.com/guide/developing/tools/proguard.html
++
++# Add any project specific keep options here:
++
++# If your project uses WebView with JS, uncomment the following
++# and specify the fully qualified class name to the JavaScript interface
++# class:
++#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
++#   public *;
++#}

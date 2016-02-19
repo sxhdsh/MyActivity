@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "F:\\Gjandroid\\MyActivity\\fragmentDemo5_commute\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "F:\\Gjandroid\\MyActivity\\fragmentDemo5_commute\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "F:\\Gjandroid\\MyActivity\\fragmentDemo5_commute\\build\\intermediates\\res\\merged\\debug\\layout\\f2.xml",
+        "source": "F:\\Gjandroid\\MyActivity\\fragmentDemo5_commute\\src\\main\\res\\layout\\f2.xml"
+    },
+    {
+        "merged": "F:\\Gjandroid\\MyActivity\\fragmentDemo5_commute\\build\\intermediates\\res\\merged\\debug\\layout\\f1.xml",
+        "source": "F:\\Gjandroid\\MyActivity\\fragmentDemo5_commute\\src\\main\\res\\layout\\f1.xml"
+    }
+]
